@@ -1,0 +1,36 @@
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.member-col {
+    padding: 0.5rem;
+    flex-shrink: 0;
+    width: 50%; /* Atur lebar menjadi 50% untuk layout 2 kolom */
+}
+
+.glass-box h5, .glass-box p {
+    margin-bottom: 0.25rem;
+}
+
+.glass-box img {
+    margin: 0 auto;
+    display: block;
+}
+
+.jadwal-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.jadwal-card-wrapper:nth-child(5) {
+    grid-column: span 2;
+}

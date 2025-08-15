@@ -1,0 +1,45 @@
+/* di src/pages/Jadwal.css */
+
+.btn-tab {
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-tab.active {
+    color: #fff;
+    /* text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff; */
+}
+
+.garis-vertikal {
+    display: block;
+    width: 1px;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* di src/pages/Jadwal.css */
+
+.jadwal-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+/* Hapus aturan yang ini:
+.jadwal-card-wrapper:nth-child(5) {
+    grid-column: span 2;
+}
+*/
+
+.jadwal-card-wrapper:nth-child(5) {
+    grid-column: 1 / 3; /* Ini akan membuat JUMAT mengambil 2 kolom */
+    justify-self: center; /* Ini yang akan menengahkan box di dalam kolomnya */
+    width: 50%; /* Atur lebarnya menjadi 50% dari container grid */
+}

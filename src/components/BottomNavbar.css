@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 330px;
+  height: 60px;
+  position: relative;
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 50px;
+  border: 0.2px solid #fff;
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.nav-button {
+  width: 43px;
+  height: 43px;
+  border-radius: 50px;
+  border: 0.2px solid #fff;
+  background: rgba(217, 217, 217, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(217, 217, 217, 0.4);
+  transform: scale(1.05);
+}
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.nav-label {
+  color: #fff;
+  font-family: 'Poppins', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.center-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0.3px solid #fff;
+  background: rgba(217, 217, 217, 0.25);
+  backdrop-filter: blur(42.3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.center-button:hover {
+  background: rgba(217, 217, 217, 0.4);
+  transform: scale(1.05);
+}
+
+.center-button-inner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20, 22, 26, 0.81);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-dots {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+}
+
+.dot:nth-child(1) {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot:nth-child(2) {
+  top: 8px;
+  right: 12px;
+}
+
+.dot:nth-child(3) {
+  top: 8px;
+  left: 12px;
+}
+
+.nav-menu {
+  position: fixed;
+  bottom: -25vh;
+  left: 0;
+  width: 100%;
+  height: 25vh;
+  background: rgba(217, 217, 217, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px 20px 0 0;
+  border-top: 0.2px solid #fff;
+  padding: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.nav-menu.active {
+  bottom: 0;
+}
+
+.nav-menu .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+}
+
+/* Modifikasi pada .menu-overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0; /* Awalnya transparan */
+  visibility: hidden; /* Sembunyikan dari interaksi user */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+/* Tambahkan kelas .active untuk memunculkan overlay */
+.menu-overlay.active {
+  opacity: 1; /* Munculkan dengan opacity penuh */
+  visibility: visible;
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    width: 300px;
+    padding: 0 0px;
+  }
+
+  .nav-label {
+    font-size: 14px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .center-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .center-button-inner {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-container {
+    width: 300px;
+    padding: 0 0px;
+  }
+
+  .nav-label {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    gap: 10px;
+  }
+}

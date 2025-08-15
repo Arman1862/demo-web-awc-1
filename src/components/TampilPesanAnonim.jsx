@@ -1,0 +1,76 @@
+import { useState, useEffect } from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { Person } from "react-bootstrap-icons"
+
+const ANONYMOUS_API_URL = "https://script.google.com/macros/s/AKfycbxqkQF3Zk9rXCYSvwDkwmq45a9nOCf_4dVGxmiPaDXiFiUUbc8xO1rS3NI6IjKoB_Hs/exec";
+
+export default function TampilPesanAnonim({ refreshTrigger }) {
+  const [pesanAnonim, setPesanAnonim] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchPesanAnonim = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(ANONYMOUS_API_URL);
+      if (!response.ok) throw new Error('Gagal mengambil data dari server.');
+      const data = await response.json();
+      setPesanAnonim(data.reverse()); 
+    } catch (error) {
+      console.error('Gagal mengambil pesan:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchPesanAnonim();
+  }, [refreshTrigger]);
+
+  return (
+    <div className="container mt-4">
+      <h2 className="text-center text-white fw-bold mb-3">Text Anonim</h2>
+
+      <div className="card p-3 rounded-4 shadow-lg"
+        style={{
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          maxHeight: '50vh',
+          overflowY: 'auto'
+        }}
+      >
+        {isLoading ? (
+          <div className="text-center text-white">
+            <div className="spinner-border"></div>
+            <p  style={{ fontSize: '1rem' }}   className="mb-0">Memuat pesan...</p>
+          </div>
+        ) : (
+          pesanAnonim.length > 0 ? (
+            pesanAnonim.map((pesan, i) => (
+              <div key={i} className="d-flex align-items-start">
+                {/* <div className="me-2">
+                  <Person />
+                </div> */}
+                <div
+                  className="p-2 rounded-3 glass-box"
+                  style={{
+                    // background: 'rgba(255, 255, 255, 0.15)',
+                    color: 'white',
+                    flex: 1
+                  }}
+                >
+                  <p  style={{ fontSize: '1rem' }}   className="mb-1">{pesan.Pesan}</p>
+                  <small className="text-light opacity-75">
+                    {pesan.Pengirim} • {new Date(pesan.Tanggal).toLocaleString()}
+                  </small>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="text-center text-white" style={{ fontSize: '1rem' }}>Belum ada pesan anonim.</p>
+          )
+        )}
+      </div>
+    </div>
+  );
+}
