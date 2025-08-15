@@ -12,9 +12,9 @@ function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   // const images = [gambar1, gambar2, gambar3];
     const images = [
-    "/pinimg/736x/d7/16/4f/d7164fc8da1c259216dae0e1c265b569.jpg",
-    "/pinimg/736x/fc/92/3a/fc923ad3ef6d6602aa1f226c1a89487f.jpg",
-    "/pinimg/736x/65/cb/7b/65cb7b9497de338f0d6732c4a9e5d2e6.jpg",
+    "https://i.pinimg.com/1200x/96/e5/98/96e59858155ba9c82ac3bde835bc7b15.jpg",
+    "https://i.pinimg.com/736x/fc/92/3a/fc923ad3ef6d6602aa1f226c1a89487f.jpg",
+    "https://i.pinimg.com/736x/65/cb/7b/65cb7b9497de338f0d6732c4a9e5d2e6.jpg",
   ];
 
 

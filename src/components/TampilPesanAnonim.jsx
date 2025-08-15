@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { Person } from "react-bootstrap-icons"
 
-const ANONYMOUS_API_URL = "/api/macros/s/AKfycbzlejyziez_VLU9CTlTU0V9aU49CT6D_aOOkJ4rjgHVmxdGFelObJxVFRszVf6gYPM8/exec";
+const ANONYMOUS_API_URL = "https://script.google.com/macros/s/AKfycbzlejyziez_VLU9CTlTU0V9aU49CT6D_aOOkJ4rjgHVmxdGFelObJxVFRszVf6gYPM8/exec";
 
 export default function TampilPesanAnonim({ refreshTrigger }) {
   const [pesanAnonim, setPesanAnonim] = useState([]);

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 
-const ANONYMOUS_API_URL = "/api/macros/s/AKfycbzlejyziez_VLU9CTlTU0V9aU49CT6D_aOOkJ4rjgHVmxdGFelObJxVFRszVf6gYPM8/exec";
+const ANONYMOUS_API_URL = "https://script.google.com/macros/s/AKfycbzlejyziez_VLU9CTlTU0V9aU49CT6D_aOOkJ4rjgHVmxdGFelObJxVFRszVf6gYPM8/exec";
 
 export default function KirimPesanAnonim({ onPesanTerkirim }) {
   const [pesan, setPesan] = useState('');
