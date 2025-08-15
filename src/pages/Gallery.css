@@ -19,3 +19,14 @@
 .slick-next:before {
   color: white;
 }
+
+.carousel-img {
+  width: 85vw;
+  height: 25vh;
+  object-fit: cover;
+}
+.img-item {
+  width: 50vw;
+  height: 15vh;
+  object-fit: cover;
+}

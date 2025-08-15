@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { Person } from "react-bootstrap-icons"
 
-const ANONYMOUS_API_URL = "https://script.google.com/macros/s/AKfycbxqkQF3Zk9rXCYSvwDkwmq45a9nOCf_4dVGxmiPaDXiFiUUbc8xO1rS3NI6IjKoB_Hs/exec";
+const ANONYMOUS_API_URL = "/api/macros/s/AKfycbzlejyziez_VLU9CTlTU0V9aU49CT6D_aOOkJ4rjgHVmxdGFelObJxVFRszVf6gYPM8/exec";
 
 export default function TampilPesanAnonim({ refreshTrigger }) {
   const [pesanAnonim, setPesanAnonim] = useState([]);
@@ -52,7 +52,7 @@ export default function TampilPesanAnonim({ refreshTrigger }) {
                   <Person />
                 </div> */}
                 <div
-                  className="p-2 rounded-3 glass-box"
+                  className="p-2 rounded-3 glass-box my-1"
                   style={{
                     // background: 'rgba(255, 255, 255, 0.15)',
                     color: 'white',
