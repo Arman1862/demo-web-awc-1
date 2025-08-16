@@ -30,7 +30,7 @@ export default function TampilPesanAnonim({ refreshTrigger }) {
     <div className="container mt-4">
       <h2 className="text-center text-white fw-bold mb-3">Text Anonim</h2>
 
-      <div className="card p-3 rounded-4 shadow-lg"
+      <div className="card p-3 rounded-4 shadow-lg mb-5"
         style={{
           background: 'rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(10px)',
