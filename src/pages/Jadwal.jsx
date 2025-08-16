@@ -21,11 +21,11 @@ function Jadwal() {
 
     // Data jadwal piket (contoh, nanti bisa kamu ubah)
     const jadwalPiket = [
-        { hari: "SENIN", daftarIsi: ["Anggota A", "Anggota B", "Anggota C"] },
-        { hari: "SELASA", daftarIsi: ["Anggota D", "Anggota E", "Anggota F"] },
-        { hari: "RABU", daftarIsi: ["Anggota G", "Anggota H", "Anggota I"] },
-        { hari: "KAMIS", daftarIsi: ["Anggota J", "Anggota K", "Anggota L"] },
-        { hari: "JUMAT", daftarIsi: ["Anggota M", "Anggota N", "Anggota O"] },
+        { hari: "SENIN", daftarIsi: ["Anggota 1", "Anggota 2", "Anggota 3", "Anggota 4", "Anggota 5"] },
+        { hari: "SELASA", daftarIsi: ["Anggota 1", "Anggota 2", "Anggota 3", "Anggota 4", "Anggota 5"] },
+        { hari: "RABU", daftarIsi: ["Anggota 1", "Anggota 2", "Anggota 3", "Anggota 4", "Anggota 5"] },
+        { hari: "KAMIS", daftarIsi: ["Anggota 1", "Anggota 2", "Anggota 3", "Anggota 4", "Anggota 5"] },
+        { hari: "JUMAT", daftarIsi: ["Anggota 1", "Anggota 2", "Anggota 3", "Anggota 4", "Anggota 5"] },
     ];
 
     const jadwalYangDitampilkan = activeTab === 'pelajaran' ? jadwalPelajaran : jadwalPiket;
